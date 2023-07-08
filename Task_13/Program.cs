@@ -7,14 +7,15 @@
 // Вариант 1. Без функции.
 // Console.Write("Введите число: ");
 // int num = Convert.ToInt32(Console.ReadLine());
-
-// if (num / 100 < 1)
+// int mod = Math.Abs(num);
+//
+// if (mod / 100 < 1)
 // {
 //     Console.Write("Третьей цифры нет");
 // }
 // else
 // {
-//     int k = num;
+//     int k = mod;
 //     while (k / 1000 >= 1)
 //     {
 //         k = (k - k % 10) / 10;
@@ -37,12 +38,13 @@ int SearchThirdDigit(int k) // ищет третью цифру числа
 
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
+int mod = Math.Abs(num);
 
-if (num / 100 < 1)
+if (mod / 100 < 1)
 {
     Console.Write("Третьей цифры нет");
 }
 else
 {
-    Console.Write($"Третья цифра числа {num}: {SearchThirdDigit(num)}");
+    Console.Write($"Третья цифра числа {num}: {SearchThirdDigit(mod)}");
 }
